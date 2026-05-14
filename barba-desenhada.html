@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Agendamento - CutsBarbier</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CutsBarbier</h1>
+
+        <p class="descricao">
+            Escolha um dia e horário para seu atendimento.
+        </p>
+
+        <div class="calendario">
+
+            <div class="topo-calendario">
+
+                <button class="seta">◀</button>
+
+                <h2>Maio 2026</h2>
+
+                <button class="seta">▶</button>
+
+            </div>
+
+            <div class="dias-semana">
+                <span>SEG</span>
+                <span>TER</span>
+                <span>QUA</span>
+                <span>QUI</span>
+                <span>SEX</span>
+                <span>SAB</span>
+                <span>DOM</span>
+            </div>
+
+            <div class="dias">
+
+                <button class="dia">1</button>
+                <button class="dia">2</button>
+                <button class="dia">3</button>
+                <button class="dia">4</button>
+                <button class="dia">5</button>
+                <button class="dia">6</button>
+                <button class="dia">7</button>
+
+                <button class="dia">8</button>
+                <button class="dia">9</button>
+                <button class="dia">10</button>
+                <button class="dia">11</button>
+
+                <button class="dia ativo">12</button>
+
+                <button class="dia">13</button>
+                <button class="dia">14</button>
+                <button class="dia">15</button>
+                <button class="dia">16</button>
+                <button class="dia">17</button>
+                <button class="dia">18</button>
+                <button class="dia">19</button>
+                <button class="dia">20</button>
+
+            </div>
+
+        </div>
+
+        <div class="horarios">
+
+            <div class="horario" onclick="abrirModal('08:00')">08:00</div>
+
+            <div class="horario" onclick="abrirModal('09:00')">09:00</div>
+
+            <div class="horario" onclick="abrirModal('10:00')">10:00</div>
+
+            <div class="horario" onclick="abrirModal('11:00')">11:00</div>
+
+            <div class="horario" onclick="abrirModal('12:00')">12:00</div>
+
+            <div class="horario" onclick="abrirModal('13:00')">13:00</div>
+
+            <div class="horario" onclick="abrirModal('14:00')">14:00</div>
+
+            <div class="horario" onclick="abrirModal('15:00')">15:00</div>
+
+            <div class="horario" onclick="abrirModal('16:00')">16:00</div>
+
+            <div class="horario" onclick="abrirModal('17:00')">17:00</div>
+
+            <div class="horario" onclick="abrirModal('18:00')">18:00</div>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+
+        <div class="modal-conteudo">
+
+            <h2>Confirmar Agendamento</h2>
+
+            <p>Corte: Barba desenhada</p>
+
+            <p>Valor: R$ 30,00</p>
+
+            <p>Dia: 12 de Maio</p>
+
+            <p id="horario-escolhido">
+                Horário: 14:00
+            </p>
+
+            <div class="botoes-modal">
+
+                <button onclick="fecharModal()">
+                    Cancelar
+                </button>
+
+                <button>
+                    Confirmar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function abrirModal(horario) {
+
+            document.getElementById("modal").style.display = "flex";
+
+            document.getElementById("horario-escolhido").innerText =
+            "Horário: " + horario;
+
+        }
+
+        function fecharModal() {
+
+            document.getElementById("modal").style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+</html>
