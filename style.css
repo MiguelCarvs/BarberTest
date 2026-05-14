@@ -44,8 +44,12 @@ h1 {
     background-color: #1f1f1f;
     padding: 30px;
     border-radius: 18px;
+
     text-align: center;
-    border: 1px solid #333;
+
+    border: 2px solid #333;
+
+    transition: 0.3s;
 }
 
 .card h2 {
@@ -69,18 +73,15 @@ h1 {
     margin-top: 15px;
 }
 
-.card {
-    background-color: #1f1f1f;
-    padding: 30px;
-    border-radius: 18px;
-
-    border: 2px solid #333;
-
-    transition: 0.3s;
-}
-
 .card:hover {
     border: 2px solid #d4af37;
 
     box-shadow: 0px 0px 20px rgba(212, 175, 55, 0.5);
+}
+
+.card-link {
+    text-decoration: none;
+    color: white;
+
+    display: block;
 }
